@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filmes em IA — Camala</title>
+  <meta name="description" content="Filmes e imagens feitos com IA por Camala.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="wrap topbar">
+    <div class="topbar-left">
+      <a href="index.html" class="logo-lockup">
+        <span class="logo-dot"></span>
+        <span class="logo-word">camala</span>
+      </a>
+      <span class="topbar-clock">00:00:00</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="navlink"><span class="sq"></span>Apresentação</a>
+      <a href="direcao-de-cena.html" class="navlink"><span class="sq"></span>Direção de Cena</a>
+      <a href="filmes-em-ia.html" class="navlink active"><span class="sq"></span>Filmes em IA</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">FILMOGRAFIA — IA</div>
+      <h1 class="h1">Filmes feitos com IA</h1>
+    </div>
+
+    <div class="film-grid">
+
+      <!-- Repita este bloco <article> pra cada filme -->
+      <article>
+        <div class="film-card-thumb grain">
+          <div class="corner"></div>
+          <div class="play">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5L19 12L8 19V5Z" stroke="#F4F2ED" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="film-card-title">[Nome do filme]</div>
+        <div class="film-card-meta">[2026]</div>
+      </article>
+
+      <article>
+        <div class="film-card-thumb grain">
+          <div class="corner"></div>
+          <div class="play">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5L19 12L8 19V5Z" stroke="#F4F2ED" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="film-card-title">[Nome do filme]</div>
+        <div class="film-card-meta">[2026]</div>
+      </article>
+
+      <article>
+        <div class="film-card-thumb grain">
+          <div class="corner"></div>
+          <div class="play">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5L19 12L8 19V5Z" stroke="#F4F2ED" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="film-card-title">[Nome do filme]</div>
+        <div class="film-card-meta">[2026]</div>
+      </article>
+
+    </div>
+
+    <div class="section-head" style="border-top:1px solid var(--line); margin-top:48px; padding-top:48px;">
+      <div class="eyebrow">GALERIA</div>
+      <h1 class="h1">Imagens em IA</h1>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Troque o background de cada .gallery-tile por uma <img> quando as imagens estiverem prontas -->
+      <div class="gallery-tile grain">
+        <div class="gallery-tile-label">[Imagem IA 01]</div>
+      </div>
+      <div class="gallery-tile grain">
+        <div class="gallery-tile-label">[Imagem IA 02]</div>
+      </div>
+      <div class="gallery-tile grain">
+        <div class="gallery-tile-label">[Imagem IA 03]</div>
+      </div>
+      <div class="gallery-tile grain">
+        <div class="gallery-tile-label">[Imagem IA 04]</div>
+      </div>
+      <div class="gallery-tile grain">
+        <div class="gallery-tile-label">[Imagem IA 05]</div>
+      </div>
+      <div class="gallery-tile grain">
+        <div class="gallery-tile-label">[Imagem IA 06]</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="wrap site-footer">
+    <span>CAMALA</span>
+    <span>2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

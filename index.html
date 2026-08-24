@@ -1,14 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Projeto</title>
+  <title>Camala — Diretor de cena · Filmes em IA</title>
+  <meta name="description" content="Camala — diretor de cena e diretor de filmes feitos com IA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Meu Projeto</h1>
-  <p>Página inicial.</p>
+
+  <header class="wrap topbar">
+    <div class="topbar-left">
+      <a href="index.html" class="logo-lockup">
+        <span class="logo-dot"></span>
+        <span class="logo-word">camala</span>
+      </a>
+      <span class="topbar-clock">00:00:00</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="navlink active"><span class="sq"></span>Apresentação</a>
+      <a href="direcao-de-cena.html" class="navlink"><span class="sq"></span>Direção de Cena</a>
+      <a href="filmes-em-ia.html" class="navlink"><span class="sq"></span>Filmes em IA</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="wrap">
+
+    <div class="reel grain">
+      <div class="reel-label">REEL_2026.MOV</div>
+      <div class="reel-timecode">00:00:00 / 00:02:14</div>
+      <div class="reel-bracket tr"></div>
+      <div class="reel-bracket bl"></div>
+      <div class="reel-play">
+        <div class="reel-play-label"><span class="logo-dot"></span>DEMOREEL</div>
+        <button class="reel-play-btn" aria-label="Reproduzir demoreel">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 5L19 12L8 19V5Z" stroke="#F4F2ED" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="meta-strip">
+      <div>
+        <div class="meta-label">DIRETOR</div>
+        <div class="meta-value">Camala</div>
+      </div>
+      <div>
+        <div class="meta-label">FUNÇÃO</div>
+        <div class="meta-value">Direção de cena<br>Filmes em IA</div>
+      </div>
+      <div>
+        <div class="meta-label">SINOPSE</div>
+        <div class="meta-value body">[Texto de apresentação curto — 2 a 3 frases sobre quem é o Camala como diretor, seu estilo e o que o move.]</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="wrap site-footer">
+    <span>CAMALA</span>
+    <span>2026</span>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
