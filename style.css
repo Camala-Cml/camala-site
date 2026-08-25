@@ -246,6 +246,23 @@ img, video { max-width: 100%; display: block; }
 
 .reel-play-btn svg { width: 26px; height: 26px; }
 
+.reel-soon {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(30px, 5vw, 52px);
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.reel-soon .logo-dot {
+  width: 10px;
+  height: 10px;
+}
+
 /* ---------- ficha técnica (meta strip) ---------- */
 
 .meta-strip {
@@ -322,6 +339,31 @@ img, video { max-width: 100%; display: block; }
 }
 
 .film-card-thumb .play svg { width: 16px; height: 16px; }
+
+.film-card-thumb iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.film-card-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(6, 8, 18, 0.75);
+  border: 1px solid rgba(244, 242, 237, 0.3);
+  border-radius: 20px;
+  padding: 5px 11px;
+  backdrop-filter: blur(2px);
+}
 
 .film-card-title {
   font-weight: 700;
