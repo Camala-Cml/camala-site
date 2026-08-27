@@ -1,12 +1,3 @@
-// Camala — menu mobile (abre/fecha a navegação no topo em telas pequenas)
-document.addEventListener('DOMContentLoaded', function () {
-  var toggle = document.querySelector('.nav-toggle');
-  if (!toggle) return;
-  toggle.addEventListener('click', function () {
-    document.body.classList.toggle('nav-open');
-  });
-});
-
 // Camala — capas de vídeo personalizadas (evita a marca do YouTube na miniatura)
 // + player em tela grande (modal). Ao clicar, abre o vídeo centralizado e ampliado
 // por cima da página; o player só carrega o YouTube nesse momento.

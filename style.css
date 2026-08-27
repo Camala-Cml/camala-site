@@ -114,22 +114,6 @@ img, video { max-width: 100%; display: block; }
   background: var(--red);
 }
 
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  margin: 5px 0;
-}
-
 /* ---------- seções / cabeçalhos ---------- */
 
 .section-head {
@@ -520,6 +504,137 @@ body.modal-open {
   color: var(--text-dim);
 }
 
+/* ---------- página de contato ---------- */
+
+.split {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
+  margin-top: 32px;
+}
+
+.visual {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 560px;
+  background-image: url("camala-contato-foto.jpg");
+  background-size: cover;
+  background-position: center 25%;
+}
+
+.visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 22% 12%, rgba(46,78,255,0.34) 0%, transparent 55%),
+    radial-gradient(ellipse at 82% 92%, rgba(229,37,42,0.30) 0%, transparent 55%),
+    linear-gradient(180deg, rgba(6,8,18,0.15) 0%, rgba(6,8,18,0.62) 100%);
+}
+
+.visual-bracket {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-color: rgba(244,242,237,0.5);
+  border-style: solid;
+  border-width: 0;
+  z-index: 2;
+}
+
+.visual-bracket.tr { top: 24px; right: 28px; border-top-width: 2px; border-right-width: 2px; }
+.visual-bracket.bl { bottom: 24px; left: 28px; border-bottom-width: 2px; border-left-width: 2px; }
+
+.visual-label {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgba(244,242,237,0.85);
+  z-index: 2;
+}
+
+.visual-tag {
+  position: absolute;
+  bottom: 24px;
+  right: 28px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(6,8,18,0.6);
+  border: 1px solid rgba(244,242,237,0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+}
+
+.visual-tag .logo-dot { width: 6px; height: 6px; }
+
+.visual-tag-word {
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 560px;
+}
+
+.contact-stack { margin-top: 8px; }
+
+.contact-row { padding: 18px 0; border-top: 1px solid var(--line); }
+.contact-row:last-child { border-bottom: 1px solid var(--line); }
+
+.contact-row .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+.contact-row .value {
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--text);
+}
+
+.contact-row .value a:hover { color: var(--red); }
+
+.role-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 14px 24px;
+  width: fit-content;
+  background: rgba(6, 8, 18, 0.75);
+  border: 1px solid rgba(244, 242, 237, 0.3);
+  border-radius: 24px;
+  backdrop-filter: blur(4px);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.role-badge .logo-dot { width: 7px; height: 7px; }
+
+.role-badge a { color: var(--text); border-bottom: 1px solid rgba(244, 242, 237, 0.4); }
+.role-badge a:hover { color: var(--red); border-color: var(--red); }
+
+@media (max-width: 900px) {
+  .role-badge { margin: 32px auto 0; font-size: 12px; padding: 11px 18px; }
+}
+
 /* ---------- rodapé ---------- */
 
 .site-footer {
@@ -540,23 +655,10 @@ body.modal-open {
 @media (max-width: 900px) {
   .wrap { padding: 0 24px; }
 
+  /* menu de cima vira abas fixas no rodapé — sem sanduíche */
   .nav { display: none; }
 
-  .nav-toggle { display: block; }
-
-  body.nav-open .nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    position: absolute;
-    top: 76px;
-    right: 24px;
-    background: var(--black);
-    padding: 20px 24px;
-    border-radius: 8px;
-    z-index: 10;
-  }
+  body { padding-bottom: 78px; }
 
   .h1.large { font-size: 38px; }
   .h1 { font-size: 32px; }
@@ -566,14 +668,84 @@ body.modal-open {
   .film-grid { grid-template-columns: repeat(2, 1fr); }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .split { grid-template-columns: 1fr; gap: 24px; }
+
+  .visual { height: 340px; }
+
+  .info { height: auto; }
 }
 
 @media (max-width: 560px) {
   .wrap { padding: 0 18px; }
 
-  .film-grid { grid-template-columns: 1fr; }
+  .film-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 
-  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  .film-card-title { font-size: 13px; margin: 10px 0 3px; }
+  .film-card-meta { font-size: 9px; letter-spacing: 1px; }
+
+  .film-card-thumb .corner { width: 16px; height: 16px; top: 10px; left: 10px; }
+  .film-card-thumb .play { width: 38px; height: 38px; }
+  .film-card-thumb .play svg { width: 13px; height: 13px; }
+
+  .film-card-tag { font-size: 8px; padding: 4px 8px; top: 8px; right: 8px; }
+
+  .gallery-tile-label { font-size: 8px; bottom: 10px; left: 10px; }
 
   .topbar-clock { display: none; }
+}
+
+/* ---------- abas no rodapé (mobile) ---------- */
+
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+    background: var(--black);
+    border-top: 1px solid var(--line);
+    padding: 10px 8px calc(10px + env(safe-area-inset-bottom));
+  }
+
+  .bottom-navlink {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 6px 4px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-dim);
+    line-height: 1.3;
+  }
+
+  .bottom-navlink .sq {
+    width: 5px;
+    height: 5px;
+    background: var(--text-dimmer);
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .bottom-navlink.active {
+    color: var(--text);
+  }
+
+  .bottom-navlink.active .sq {
+    background: var(--red);
+  }
 }
